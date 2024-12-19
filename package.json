@@ -1,14 +1,49 @@
 {
   "name": "currency-converter",
   "version": "1.0.0",
+  "description": "A simple and intuitive Currency Converter built with Electron",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "devDependencies": {
-    "electron": "^33.2.1"
+    "electron": "^33.2.1",
+    "electron-builder": "^23.0.0"
   },
   "dependencies": {
     "@everapi/freecurrencyapi-js": "^1.0.1"
+  },
+"build": {
+  "appId": "com.manxlr.currencyconverter",
+  "productName": "Currency Converter",
+  "files": [
+    "**/*"
+  ],
+  "directories": {
+    "buildResources": "assets"
+  },
+  "win": {
+    "target": [
+      "nsis"
+    ],
+    "icon": "assets/icon.ico",
+    "compression": "maximum"
+  },
+  "mac": {
+    "target": [
+      "dmg"
+    ],
+    "icon": "assets/icon.png",
+    "compression": "maximum"
+  },
+  "linux": {
+    "target": [
+      "AppImage"
+    ],
+    "icon": "assets/icon.png",
+    "compression": "maximum"
   }
+}
+
 }
