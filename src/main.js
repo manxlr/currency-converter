@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, dialog, shell } = require('electron');
+const { app, BrowserWindow, Menu, dialog, clipboard } = require('electron');
 const path = require('path');
 
 let mainWindow;
@@ -55,7 +55,7 @@ function createWindow() {
   });
 }
 
-// Show About dialog with clickable links
+// Show About dialog with copy buttons for email and GitHub link
 function showAboutDialog() {
   dialog.showMessageBox(mainWindow, {
     type: 'info',
@@ -67,20 +67,17 @@ function showAboutDialog() {
       GitHub: https://github.com/manxlr
       License: MIT
     `,
-    buttons: ['OK'],
-    // Make the Email and GitHub links clickable
-    checkboxLabel: 'Click to open links in the default browser',  // Optional (can be removed if not needed)
-    noLink: true
-  }).then(() => {
-    // Add event listener for clicks on links after the dialog is shown
-    mainWindow.webContents.on('new-window', (event, url) => {
-      if (url.includes('mailto:')) {
-        shell.openExternal(url); // Open email client
-      } else {
-        shell.openExternal(url); // Open GitHub URL or other links in the default browser
-      }
-      event.preventDefault(); // Prevent the default behavior
-    });
+    buttons: ['Copy Email', 'Copy GitHub', 'OK']
+  }).then(result => {
+    if (result.response === 0) {
+      // User clicked "Copy Email" button
+      clipboard.writeText('nszeeshankhalid@gmail.com');
+      console.log('Email copied to clipboard');
+    } else if (result.response === 1) {
+      // User clicked "Copy GitHub" button
+      clipboard.writeText('https://github.com/manxlr');
+      console.log('GitHub URL copied to clipboard');
+    }
   });
 }
 
