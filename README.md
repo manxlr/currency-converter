@@ -50,7 +50,7 @@ To run the application:
    ```
 4. A GUI window will open, allowing you to enter the amount to convert, select the source and target currencies, and view the converted result.
 
-![Currency Converter GUI](assets/currency-converter.png)
+![Currency Converter GUI](assets/Main_GUI.png)
 
 ---
 
