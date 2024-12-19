@@ -38,7 +38,9 @@ A simple and intuitive **Currency Converter** built with **Electron** and **Java
 ## 🚀 **Usage**
 
 To run the application:
-
+### Windows 
+Please use this link to download [Setup](https://github.com/manxlr/currency-converter/releases/download/v1.0.0/Currency.Converter.Setup.1.0.0.exe)
+### Source Code
 1. Clone or download the repository.
 2. Install the dependencies by running the following command in your project directory:
    ```bash
@@ -99,12 +101,14 @@ For any questions, suggestions, or feedback, please reach out:
 
 ---
 
-### ✨ **Donate**
+## 💖 **Donations**
 
 If you find this project helpful and would like to support its continued development, you can donate using the following cryptocurrency addresses:
 
 - **Ethereum (ETH)**: `0x23774348bc491Ff70F39c63f39B0e542a59b5B14`  
 - **Bitcoin (BTC)**: `bc1qp7wltg8frvecuujjs9f3ck28r0s0h0qzld2fu6`  
 - **Dogecoin (DOGE)**: `DTbwxMs4wenN2kUea77rHPQ8nbJrSk4o7D`  
+
+Your support is greatly appreciated and helps maintain and improve open-source projects!
 
 ---
