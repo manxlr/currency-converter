@@ -1,0 +1,55 @@
+# Node.js dependencies
+/node_modules/
+
+# Electron's cache
+/.electron
+/.cache/
+
+# Electron build and distribution folders
+/dist/
+/release/
+/build/
+
+# Mac app bundle (if you’re building for Mac)
+*.app/
+
+# Windows Installer
+*.exe
+*.msi
+
+# Linux AppImage
+*.AppImage
+
+# log files
+*.log
+
+# Debug and temp files
+.vscode/
+/.idea/
+/*.log
+*.bak
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# npm package lock files (if you want to keep it out of version control)
+package-lock.json
+yarn.lock
+
+# dotenv files for environment variables
+.env
+.env.local
+.env.*.local
+
+# Other Electron files
+/.eslintcache
+/.nyc_output
+coverage/
+
+# Webpack / bundler output
+/webpack/
+
+# Optional: if you want to exclude specific IDE configs
+/.vscode
+/.idea
