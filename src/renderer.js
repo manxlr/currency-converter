@@ -1,3 +1,4 @@
+// Function to convert currency
 async function convertCurrency() {
     const amount = parseFloat(document.getElementById('amount').value);
     const fromCurrency = document.getElementById('from-currency').value;
@@ -8,19 +9,32 @@ async function convertCurrency() {
       return;
     }
   
-    // Make an API call to get the exchange rate
-    const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`);
-    const data = await response.json();
+    // Show loading spinner
+    document.getElementById('spinner').style.display = 'block';
   
-    if (data.error) {
-      alert('Error fetching exchange rates!');
-      return;
+    try {
+      // Fetch conversion rates from the freecurrencyapi.com API
+      const response = await fetch(`https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_cwhUu8oHGGRXIx1jsq9MfNGMjNpQna4An7EOEaik&base_currency=${fromCurrency}&currencies=${toCurrency}`);
+      const data = await response.json();
+  
+      // Check for a successful response
+      if (data.data) {
+        // Extract the conversion rate
+        const rate = data.data[toCurrency];
+        const convertedAmount = (amount * rate).toFixed(2);
+  
+        // Display the result
+        document.getElementById('converted-amount').innerText = `${convertedAmount} ${toCurrency}`;
+      } else {
+        alert('Error fetching exchange rates. Please try again.');
+      }
+  
+    } catch (error) {
+      console.error('Error fetching exchange rates:', error);
+      alert('Error fetching exchange rates.');
+    } finally {
+      // Hide loading spinner
+      document.getElementById('spinner').style.display = 'none';
     }
-  
-    const rate = data.rates[toCurrency];
-    const convertedAmount = (amount * rate).toFixed(2);
-  
-    // Update the result on the UI
-    document.getElementById('converted-amount').innerText = convertedAmount;
   }
   

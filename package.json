@@ -1,15 +1,14 @@
 {
   "name": "currency-converter",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "electron": "^33.2.1"
+  },
+  "dependencies": {
+    "@everapi/freecurrencyapi-js": "^1.0.1"
   }
 }
