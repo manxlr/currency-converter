@@ -61,7 +61,6 @@ Please use this link to download [Setup](https://github.com/manxlr/currency-conv
 - **Currency Conversion**: Convert between major currencies using live exchange rates.
 - **Real-time Fetching**: The app fetches the latest exchange rates from the FreeCurrencyAPI.
 - **Simple User Interface**: The app has an intuitive interface with dropdown menus for currencies and a text box for the amount.
-- **Error Handling**: The app provides proper feedback in case of errors (e.g., invalid amount, API errors).
 
 ---
 
