@@ -9,7 +9,7 @@ A simple and intuitive **Currency Converter** built with **Electron** and **Java
 ## 🔍 Key Features
 
 - **Real-time Currency Conversion**  
-  Convert currencies using up-to-date exchange rates from the [FreeCurrencyAPI](https://freecurrencyapi.com).
+  Convert currencies using realtime up-to-date exchange rates from the [FreeCurrencyAPI](https://freecurrencyapi.com).
 
 - **User-Friendly GUI Interface**  
   Built using **Electron**, it provides a smooth and intuitive interface for currency conversion.
