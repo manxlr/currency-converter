@@ -6,7 +6,7 @@ A simple and intuitive **Currency Converter** built with **Electron** and **Java
 
 ---
 
-## 🔍 Key Features
+## 🔍 Key Features of the App
 
 - **Real-time Currency Conversion**  
   Convert currencies using realtime up-to-date exchange rates from the [FreeCurrencyAPI](https://freecurrencyapi.com).
